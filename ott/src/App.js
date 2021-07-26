@@ -42,11 +42,11 @@ function App() {
   const [title,setTitle]= useState([]);
   const [image,setImage]=useState([]);
   const [rating,setRating]=useState([]);
-function clickHandler(items){
+function clickHandler(item){
  
-  var resArr=objLib[items];
-  var resImg=imgLib[items];
-  var x=imdb[items];
+  var resArr=objLib[item];
+  var resImg=imgLib[item];
+  var x=imdb[item];
 setTitle(resArr);
 setImage(resImg);
 setRating(x);
