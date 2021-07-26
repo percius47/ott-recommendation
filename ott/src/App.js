@@ -18,7 +18,7 @@ var objLib={
   
   "Rom-Com":["The Last Summer", "Yesterday", "50 First Dates"],
   "Thriller":["La Llorona", "Close", "Greta"],
-  "Comedy":["Dolittle","Roohi","TAG"],
+  "Comedy":["Once upon a time in Hollywood","We're the Millers","TAG"],
   };
   var imgLib={
 
@@ -61,7 +61,7 @@ var resArr="";
 var resImg="";
 var xy="";
   if(objLib[resKey]===undefined)
- { resArr=["Please Come back later. We are expanding our Databse."];
+ { resArr=["404"];
   resImg=[];
   xy=0;
 }
@@ -116,6 +116,7 @@ useEffect(() => {
           
           {arrLib.map(function (items){
             return (
+
             <span
             onClick={()=>clickHandler(items)}
             key={items}
@@ -160,21 +161,38 @@ useEffect(() => {
       <div className="outputList">
 
         {title.map(function(label,index){
+          
           const currentImg=image[index];
           const crating= rating[index];
-          return(
-            <div className="resultList">
 
-      <img src={currentImg} alt="title" className="listImage" />
-            <span
-            key={label}
-            className="listItems">Title: {label}</span>
-            <span
-            key={rating}
-            className="listRating">IMDB: {crating}/10</span>
-           
+          
+            if(title[0]==="404")
+            return(
+              <div className="notFound">
+            <span >Sorry! We could not find this genre. Please come back later while we expand our database.</span>
             </div>
-          )
+            
+            );
+
+            else{
+              
+          
+          return(
+            
+            <div className="resultList">
+              <div className="imgParent">
+
+      <img src={currentImg} alt="title" className="listImage" /></div>
+            <div className="textParent">
+            <h2
+            key={label}
+            className="listItems">Title: {label}</h2>
+            <h4
+            key={rating}
+            className="listRating">IMDB: {crating}/10</h4>
+           </div>
+            </div>
+          )}
 
         })}
         

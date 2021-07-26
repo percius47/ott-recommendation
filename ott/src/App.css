@@ -3,11 +3,11 @@
   display: block;
  
   min-width: 550px;
- 
+  background-color: rgb(36, 34, 34);
 }
 body{
-  background-color: rgb(36, 34, 34);
- 
+  
+  background-color:black;
 }
 *{
   border: 0;
@@ -112,24 +112,14 @@ body{
    .inputText{ 
      display: none;
    }
+   .search{
+     display: none;
+   }
 }
 
   /* Nav Css end */
 
-.listImage{
-  height: 400px;
-  width: 200px;
-  opacity: 0.8;
-    object-fit: contain;
-    margin-right: 10px;
-    width: 50%;
-    transition: transform 450ms;
-    padding:1rem;
-    position: absolute;
-    left:0;
-    margin-top: 2rem;
 
-}
 
 .outputList{
   display: block;
@@ -147,22 +137,22 @@ body{
 
 .resultList{
  
-  position: relative;
-  height: 70vh;
+
+  height: 40vh;
 }
 .listImage{
-  height: 400px;
-  width: 200px;
+  height: 200px;
+    width: 100px;
   opacity: 0.8;
     object-fit: contain;
-    margin-right: 10px;
+  
     width: 50%;
     transition: transform 450ms;
     padding:1rem;
-    position: absolute;
-    left:0;
-    margin-top: 2rem;
-    border-right: 1px solid rgb(32, 32, 32);
+   
+  
+    margin-bottom: 1rem;
+
 
 }
 .listImage:hover{
@@ -173,12 +163,13 @@ body{
 .listItems{
   color: white;
   font-weight: 800;
-  font-size: 200%;
- position: absolute;
-left:1000px;
-top: 200px;
- opacity: 0.8;
+  font-size: 150%;
+display: block;
+text-align: center;
 
+ opacity: 0.8;
+margin-left:auto;
+margin-top: 5rem;
 }
 .listItems:hover{
   opacity: 1;
@@ -186,9 +177,9 @@ top: 200px;
 
 .listRating{
   color:yellow;
-  position: absolute;
-  left: 1050px;
-  top: 300px;
+
+  
+  font-size: 100%;
   transition: transform 450ms;
   opacity: 0.8;
 }
@@ -197,12 +188,36 @@ top: 200px;
   opacity: 1;
 }
 
+.textParent{
+float: right;
+margin-right: 0;
+width:40%;
+
+}
+.imgParent{
+  float: left;
+  margin-left: 0;
+  width: 60%;
+}
+
 /* footer */
 .footer{
   height: 20vh;
   background-color: black;
-  margin-top:0px;
+  margin-top:20px;
   position: relative;
+  width: 100%;
+  z-index: 1;
+  padding-bottom: 1rem;
+}
+.footer:before,
+.footer:after {
+    content:"";
+    display:table;
+    line-height:0;
+}
+.footer:after {
+    clear:both;
 }
 
 .footText{
@@ -210,6 +225,16 @@ top: 200px;
   position:absolute;
   right: 10px;
   bottom: 0px;
-  padding:1rem;
+ 
 
+}
+
+.notFound{
+color: white;
+font-size: 200%;
+text-align: center;
+margin-top: 8rem;
+margin-bottom: 8rem;
+margin-left: auto;
+margin-right: auto;
 }
