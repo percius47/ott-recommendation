@@ -39,9 +39,10 @@ var objLib={
 
 var arrLib=Object.keys(objLib);
 function App() {
-  const [title,setTitle]= useState([]);
-  const [image,setImage]=useState([]);
-  const [rating,setRating]=useState([]);
+  const [title,setTitle]= useState(objLib["Rom-Com"]);
+  const [image,setImage]=useState(imgLib["Rom-Com"]);
+  const [rating,setRating]=useState(imdb["Rom-Com"]);
+
 function clickHandler(item){
  
   var resArr=objLib[item];
